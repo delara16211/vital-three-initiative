@@ -24,50 +24,46 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 8%;
+  padding: 28px 8%;
+  background: rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
 }
 
 .logo {
   font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 24px;
   font-size: 14px;
-  opacity: 0.9;
-}
-
-nav a:hover {
-  opacity: 1;
-  text-decoration: underline;
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 8%;
-  max-width: 950px;
-  animation: fadeUp 1s ease;
 }
 
 .hero h1 {
-  font-size: 70px;
-  line-height: 1.05;
+  font-size: 68px;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.7;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .btn {
@@ -75,8 +71,8 @@ nav a:hover {
   display: inline-block;
   background: white;
   color: #C1122F;
-  padding: 14px 28px;
-  border-radius: 30px;
+  padding: 15px 30px;
+  border-radius: 40px;
   text-decoration: none;
   font-weight: bold;
   width: fit-content;
@@ -84,67 +80,56 @@ nav a:hover {
 }
 
 .btn:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 section {
-  margin: 40px 8%;
+  margin: 60px 8%;
   padding: 60px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
-  animation: fadeUp 1s ease;
+  background: rgba(255,255,255,0.10);
+  border-radius: 28px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 42px;
   margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.8;
 }
 
 .pillars {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 25px;
+  margin-top: 30px;
 }
 
 .card {
-  background: rgba(255,255,255,0.15);
-  padding: 25px;
-  border-radius: 20px;
+  background: rgba(255,255,255,0.14);
+  padding: 28px;
+  border-radius: 22px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  background: rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.20);
 }
 
 .card h3 {
+  font-size: 25px;
   margin-bottom: 12px;
-  font-size: 24px;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-  opacity: 0.9;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .reveal {
   opacity: 0;
-  transform: translateY(35px);
-  transition: 0.8s ease;
+  transform: translateY(40px);
+  transition: 0.9s ease;
 }
 
 .reveal.active {
@@ -152,10 +137,16 @@ footer {
   transform: translateY(0);
 }
 
+footer {
+  text-align: center;
+  padding: 45px;
+  opacity: 0.9;
+}
+
 @media(max-width:700px) {
   header {
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
   }
 
   .hero h1 {
@@ -174,8 +165,8 @@ footer {
 <header>
   <div class="logo">The Vital Three Initiative</div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#pillars">Pillars</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
   </nav>
@@ -184,37 +175,59 @@ footer {
 <div class="hero">
   <h1>Brain. Skin. Heart.</h1>
   <p>
-    A student-led initiative exploring how cardiology, neurology, and dermatology are deeply connected through lifestyle, stress, sleep, and science.
+    A student-led health initiative exploring how neurology, dermatology, and cardiology are connected through lifestyle, stress, sleep, and science.
   </p>
   <a href="contact.html" class="btn">Join the Initiative</a>
 </div>
 
-<section class="reveal">
+<section id="mission" class="reveal">
   <h2>Our Mission</h2>
   <p>
-    The Vital Three Initiative aims to simplify health education by connecting the brain, skin, and heart. Through research, content creation, and awareness, we help students understand how daily habits impact overall health.
+    The Vital Three Initiative aims to make health education clear, modern, and accessible by exploring the connection between the brain, skin, and heart.
+    Through education, research, and awareness, we help students understand how daily habits can affect multiple systems in the body.
   </p>
 </section>
 
-<section class="reveal">
+<section id="pillars" class="reveal">
   <h2>Our Three Pillars</h2>
 
   <div class="pillars">
     <div class="card">
-      <h3>Cardiology</h3>
-      <p>Understanding heart health, circulation, lifestyle habits, and cardiovascular wellness.</p>
-    </div>
-
-    <div class="card">
       <h3>Neurology</h3>
-      <p>Exploring brain function, stress, sleep, focus, and emotional health.</p>
+      <p>
+        We explore brain health, stress, sleep, focus, emotions, and how the nervous system affects the body.
+      </p>
     </div>
 
     <div class="card">
       <h3>Dermatology</h3>
-      <p>Analyzing skin health, hormones, acne, and the connection between internal and external health.</p>
+      <p>
+        We discuss skin health, acne, hormones, skin science, and how internal health can affect the skin.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Cardiology</h3>
+      <p>
+        We focus on heart health, circulation, exercise, stress responses, and cardiovascular wellness.
+      </p>
     </div>
   </div>
+</section>
+
+<section class="reveal">
+  <h2>What We Do</h2>
+  <p>
+    We create science-based content, publish articles, build awareness campaigns, and aim to conduct student-led research about the connections between health, lifestyle, and the body.
+  </p>
+</section>
+
+<section class="reveal">
+  <h2>Blog & Articles</h2>
+  <p>
+    Our blog expands on Instagram posts with deeper explanations, research insights, and student-friendly articles.
+  </p>
+  <a href="blog.html" class="btn">Read Articles</a>
 </section>
 
 <footer>
@@ -224,14 +237,17 @@ footer {
 <script>
 const reveals = document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
+function revealOnScroll() {
   reveals.forEach(section => {
     const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (top < window.innerHeight - 120) {
       section.classList.add("active");
     }
   });
-});
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
 </script>
 
 </body>
