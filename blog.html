@@ -4,19 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blog | The Vital Three Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:center;padding:28px 8%}
-.logo{font-weight:bold}
-nav a{color:white;text-decoration:none;margin-left:22px;opacity:.9}
-nav a:hover{text-decoration:underline}
-section{padding:55px 8%}
-h1{font-size:52px;margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
-.article{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:26px;padding:28px;border:1px solid rgba(255,255,255,.18)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:26px 8%;backdrop-filter:blur(18px);background:rgba(255,255,255,.08)}
+.logo{font-weight:800}
+nav a{color:white;text-decoration:none;margin-left:24px;opacity:.85}
+nav a:hover{opacity:1}
+main{padding:70px 8%}
+h1{font-size:60px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.article{padding:30px;border-radius:28px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(18px);transition:.3s}
+.article:hover{transform:translateY(-8px);background:rgba(255,255,255,.18)}
 .article h3{font-size:24px;margin-bottom:12px}
-.article p{line-height:1.7}
+.article p{line-height:1.7;opacity:.9}
 </style>
 </head>
 <body>
@@ -31,26 +33,23 @@ h1{font-size:52px;margin-bottom:25px}
   </nav>
 </header>
 
-<section>
+<main>
   <h1>Blog & Articles</h1>
-
   <div class="grid">
     <div class="article">
-      <h3>Coming Soon: Stress and the Body</h3>
-      <p>An article explaining how stress can affect the brain, skin, and heart at the same time.</p>
+      <h3>How Stress Connects the Brain, Skin, and Heart</h3>
+      <p>Coming soon: a deeper explanation of how stress impacts multiple body systems.</p>
     </div>
-
     <div class="article">
-      <h3>Coming Soon: Sleep and Health</h3>
-      <p>A deeper explanation of how sleep affects focus, skin repair, and heart health.</p>
+      <h3>Why Sleep Matters More Than You Think</h3>
+      <p>Coming soon: how sleep affects focus, skin repair, and cardiovascular health.</p>
     </div>
-
     <div class="article">
-      <h3>Coming Soon: Lifestyle Connections</h3>
-      <p>How daily habits influence multiple systems in the body and shape long-term health.</p>
+      <h3>The Science Behind Lifestyle and Health</h3>
+      <p>Coming soon: how daily habits shape the body’s most vital systems.</p>
     </div>
   </div>
-</section>
+</main>
 
 </body>
 </html>
