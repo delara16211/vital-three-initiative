@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | The Vital Three Initiative</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #0B132B, #C1122F, #F2B6A0);
-  color: white;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8%;
-}
-
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-section {
-  padding: 60px 8%;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 8%}
+.logo{font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:22px;opacity:.9}
+nav a:hover{text-decoration:underline}
+section{margin:50px 8%;padding:55px;background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:28px;border:1px solid rgba(255,255,255,.18)}
+h1{font-size:52px;margin-bottom:20px}
+p{font-size:18px;line-height:1.8}
+.box{margin-top:25px;background:rgba(255,255,255,.15);padding:25px;border-radius:20px}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h3>The Vital Three Initiative</h3>
+  <div class="logo">The Vital Three Initiative</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -41,10 +30,14 @@ section {
 </header>
 
 <section>
-  <h1>Contact</h1>
-  <p>Email: thevital3initiative@gmail.com</p>
-  <p>Instagram: @thevital3initiative</p>
-  <p>Phone: 0571884758</p>
+  <h1>Contact Us</h1>
+  <p>For collaborations, questions, or team opportunities, contact us through the details below.</p>
+
+  <div class="box">
+    <p>Email: thevital3initiative@gmail.com</p>
+    <p>Instagram: @thevital3initiative</p>
+    <p>Phone: 0571884758</p>
+  </div>
 </section>
 
 </body>
