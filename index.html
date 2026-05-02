@@ -6,156 +6,156 @@
 <title>The Vital Three Initiative</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+html{scroll-behavior:smooth}
+
+body{
+  background:linear-gradient(135deg,#0b132b 0%,#b81432 48%,#f2b6a0 100%);
+  color:white;
+  min-height:100vh;
 }
 
-html {
-  scroll-behavior: smooth;
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:28px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:100;
+  background:rgba(0,0,0,.08);
+  backdrop-filter:blur(10px);
 }
 
-body {
-  background: linear-gradient(135deg, #0B132B 0%, #C1122F 55%, #F2B6A0 100%);
-  color: white;
-  min-height: 100vh;
+.logo{font-weight:bold}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:24px;
+  font-size:14px;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 28px 8%;
-  background: rgba(0,0,0,0.08);
-  backdrop-filter: blur(10px);
+.hero{
+  min-height:100vh;
+  padding:0 8%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
-.logo {
-  font-weight: bold;
+.hero h1{
+  font-size:72px;
+  line-height:1.05;
+  margin-bottom:22px;
+  animation:fadeUp 1s ease;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 24px;
-  font-size: 14px;
+.hero p{
+  font-size:20px;
+  max-width:760px;
+  line-height:1.7;
+  animation:fadeUp 1.2s ease;
 }
 
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 8%;
+.btn{
+  margin-top:30px;
+  background:white;
+  color:#b81432;
+  padding:15px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  font-weight:bold;
+  width:fit-content;
+  transition:.3s;
 }
 
-.hero h1 {
-  font-size: 68px;
-  margin-bottom: 20px;
+.btn:hover{transform:translateY(-5px)}
+
+section{
+  margin:70px 8%;
+  padding:60px;
+  background:rgba(255,255,255,.10);
+  border-radius:30px;
+  backdrop-filter:blur(14px);
+  box-shadow:0 20px 60px rgba(0,0,0,.18);
 }
 
-.hero p {
-  font-size: 20px;
-  line-height: 1.7;
-  max-width: 760px;
+h2{
+  font-size:42px;
+  margin-bottom:22px;
 }
 
-.btn {
-  margin-top: 30px;
-  display: inline-block;
-  background: white;
-  color: #C1122F;
-  padding: 15px 30px;
-  border-radius: 40px;
-  text-decoration: none;
-  font-weight: bold;
-  width: fit-content;
-  transition: 0.3s;
+p{
+  font-size:18px;
+  line-height:1.8;
 }
 
-.btn:hover {
-  transform: translateY(-5px);
+.pillars{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:25px;
+  margin-top:30px;
 }
 
-section {
-  margin: 60px 8%;
-  padding: 60px;
-  background: rgba(255,255,255,0.10);
-  border-radius: 28px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+.card{
+  background:rgba(255,255,255,.15);
+  padding:28px;
+  border-radius:24px;
+  transition:.3s;
 }
 
-h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
+.card:hover{
+  transform:translateY(-8px);
+  background:rgba(255,255,255,.22);
 }
 
-p {
-  font-size: 18px;
-  line-height: 1.8;
+.card h3{
+  font-size:25px;
+  margin-bottom:12px;
 }
 
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  margin-top: 30px;
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.9s ease;
 }
 
-.card {
-  background: rgba(255,255,255,0.14);
-  padding: 28px;
-  border-radius: 22px;
-  transition: 0.3s;
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-.card:hover {
-  transform: translateY(-8px);
-  background: rgba(255,255,255,0.20);
+.chatbox{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  background:white;
+  color:#b81432;
+  padding:14px 20px;
+  border-radius:30px;
+  font-weight:bold;
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
+  z-index:200;
+  text-decoration:none;
 }
 
-.card h3 {
-  font-size: 25px;
-  margin-bottom: 12px;
+footer{
+  text-align:center;
+  padding:45px;
+  opacity:.9;
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: 0.9s ease;
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-footer {
-  text-align: center;
-  padding: 45px;
-  opacity: 0.9;
-}
-
-@media(max-width:700px) {
-  header {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .hero h1 {
-    font-size: 45px;
-  }
-
-  section {
-    padding: 35px;
-  }
+@media(max-width:700px){
+  header{flex-direction:column;gap:12px}
+  .hero h1{font-size:45px}
+  section{padding:35px}
 }
 </style>
 </head>
@@ -175,7 +175,7 @@ footer {
 <div class="hero">
   <h1>Brain. Skin. Heart.</h1>
   <p>
-    A student-led health initiative exploring how neurology, dermatology, and cardiology are connected through lifestyle, stress, sleep, and science.
+    A student-led health initiative exploring how the mind, skin, and heart are connected through stress, sleep, lifestyle, and science.
   </p>
   <a href="contact.html" class="btn">Join the Initiative</a>
 </div>
@@ -183,31 +183,31 @@ footer {
 <section id="mission" class="reveal">
   <h2>Our Mission</h2>
   <p>
-    The Vital Three Initiative aims to make health education clear, modern, and accessible by exploring the connection between the brain, skin, and heart.
-    Through education, research, and awareness, we help students understand how daily habits can affect multiple systems in the body.
+    Our mission is to make health education clear, modern, and accessible by helping students understand how the brain, skin, and heart work together as connected systems.
+    Through awareness, research, and educational content, The Vital Three Initiative aims to show how daily habits can affect overall health.
   </p>
 </section>
 
 <section id="pillars" class="reveal">
-  <h2>Our Three Pillars</h2>
+  <h2>The Vital Three Pillars</h2>
 
   <div class="pillars">
     <div class="card">
-      <h3>Neurology</h3>
+      <h3>Mind</h3>
       <p>
-        We explore brain health, stress, sleep, focus, emotions, and how the nervous system affects the body.
+        We explore brain health, stress, sleep, focus, emotions, and how the nervous system influences the body.
       </p>
     </div>
 
     <div class="card">
-      <h3>Dermatology</h3>
+      <h3>Skin</h3>
       <p>
-        We discuss skin health, acne, hormones, skin science, and how internal health can affect the skin.
+        We discuss skin health, acne, hormones, skincare science, and how internal health can affect the skin.
       </p>
     </div>
 
     <div class="card">
-      <h3>Cardiology</h3>
+      <h3>Heart</h3>
       <p>
         We focus on heart health, circulation, exercise, stress responses, and cardiovascular wellness.
       </p>
@@ -218,35 +218,37 @@ footer {
 <section class="reveal">
   <h2>What We Do</h2>
   <p>
-    We create science-based content, publish articles, build awareness campaigns, and aim to conduct student-led research about the connections between health, lifestyle, and the body.
+    We create science-based content, publish articles, raise awareness, and build student-led projects that explain the connection between lifestyle and health.
   </p>
 </section>
 
 <section class="reveal">
   <h2>Blog & Articles</h2>
   <p>
-    Our blog expands on Instagram posts with deeper explanations, research insights, and student-friendly articles.
+    Our blog expands on our Instagram posts with deeper explanations about the connection between the mind, skin, and heart.
   </p>
   <a href="blog.html" class="btn">Read Articles</a>
 </section>
+
+<a class="chatbox" href="contact.html">Contact us</a>
 
 <footer>
   <p>© 2026 The Vital Three Initiative</p>
 </footer>
 
 <script>
-const reveals = document.querySelectorAll(".reveal");
+const reveals=document.querySelectorAll(".reveal");
 
-function revealOnScroll() {
-  reveals.forEach(section => {
-    const top = section.getBoundingClientRect().top;
-    if (top < window.innerHeight - 120) {
+function revealOnScroll(){
+  reveals.forEach(section=>{
+    const top=section.getBoundingClientRect().top;
+    if(top<window.innerHeight-120){
       section.classList.add("active");
     }
   });
 }
 
-window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("scroll",revealOnScroll);
 revealOnScroll();
 </script>
 
