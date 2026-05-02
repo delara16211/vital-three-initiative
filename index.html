@@ -4,24 +4,121 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Vital Three Initiative</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
-header{display:flex;justify-content:space-between;align-items:center;padding:28px 8%}
-.logo{font-weight:bold;letter-spacing:.5px}
-nav a{color:white;text-decoration:none;margin-left:22px;font-size:15px;opacity:.9}
-nav a:hover{opacity:1;text-decoration:underline}
-.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:0 8%;max-width:950px}
-.hero h1{font-size:68px;line-height:1.05;margin-bottom:22px}
-.hero p{font-size:21px;line-height:1.6;max-width:750px}
-.btn{display:inline-block;margin-top:32px;background:white;color:#C1122F;padding:15px 30px;border-radius:40px;text-decoration:none;font-weight:bold;width:max-content}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;padding:40px 8% 80px}
-.card{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:28px}
-.card h3{margin-bottom:12px;font-size:24px}
-.card p{line-height:1.6}
-@media(max-width:700px){header{flex-direction:column;gap:15px}.hero h1{font-size:44px}nav a{margin:0 8px}}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  color:white;
+  background:linear-gradient(135deg,#0B132B 0%,#C1122F 55%,#F2B6A0 100%);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:radial-gradient(circle at 80% 10%,rgba(255,255,255,.35),transparent 30%),
+             radial-gradient(circle at 15% 80%,rgba(11,19,43,.8),transparent 35%);
+  pointer-events:none;
+}
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:26px 8%;
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.logo{font-weight:800;letter-spacing:.5px}
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:24px;
+  font-weight:500;
+  opacity:.85;
+}
+nav a:hover{opacity:1}
+.hero{
+  position:relative;
+  z-index:2;
+  min-height:88vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 8%;
+}
+.badge{
+  width:max-content;
+  padding:10px 18px;
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:50px;
+  background:rgba(255,255,255,.12);
+  margin-bottom:24px;
+  animation:fadeUp .8s ease forwards;
+}
+h1{
+  font-size:clamp(48px,8vw,94px);
+  max-width:900px;
+  line-height:.98;
+  letter-spacing:-3px;
+  animation:fadeUp 1s ease forwards;
+}
+.hero p{
+  margin-top:25px;
+  max-width:720px;
+  font-size:21px;
+  line-height:1.7;
+  opacity:.92;
+  animation:fadeUp 1.2s ease forwards;
+}
+.btns{margin-top:35px;display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  padding:15px 26px;
+  border-radius:40px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.3s;
+}
+.primary{background:white;color:#C1122F}
+.secondary{border:1px solid rgba(255,255,255,.35);color:white}
+.btn:hover{transform:translateY(-4px)}
+.grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:24px;
+  padding:40px 8% 90px;
+}
+.card{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:28px;
+  padding:30px;
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 50px rgba(0,0,0,.18);
+  transition:.35s;
+}
+.card:hover{transform:translateY(-8px);background:rgba(255,255,255,.18)}
+.card h3{font-size:25px;margin-bottom:12px}
+.card p{line-height:1.7;opacity:.9}
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:700px){
+  header{flex-direction:column;gap:14px}
+  nav a{margin:0 8px;font-size:14px}
+}
 </style>
 </head>
+
 <body>
 
 <header>
@@ -35,23 +132,29 @@ nav a:hover{opacity:1;text-decoration:underline}
 </header>
 
 <section class="hero">
-  <h1>Brain. Skin. Heart.</h1>
-  <p>A student-led health initiative exploring how neurology, dermatology, and cardiology are connected through lifestyle, stress, sleep, and science.</p>
-  <a class="btn" href="contact.html">Join the Initiative</a>
+  <div class="badge">Student-led health education</div>
+  <h1>Brain. Skin. Heart. One connected system.</h1>
+  <p>
+    The Vital Three Initiative explores how neurology, dermatology, and cardiology connect through stress, sleep, lifestyle, and science.
+  </p>
+  <div class="btns">
+    <a class="btn primary" href="contact.html">Join the Initiative</a>
+    <a class="btn secondary" href="blog.html">Read Articles</a>
+  </div>
 </section>
 
-<section class="cards">
+<section class="grid">
   <div class="card">
     <h3>Education</h3>
-    <p>We simplify medical and health concepts so students can understand how the body works as one connected system.</p>
+    <p>We simplify complex medical topics into clear, student-friendly content.</p>
   </div>
   <div class="card">
     <h3>Research</h3>
-    <p>We aim to explore student health patterns through surveys, awareness projects, and research-based content.</p>
+    <p>We explore student health through surveys, articles, and awareness projects.</p>
   </div>
   <div class="card">
-    <h3>Awareness</h3>
-    <p>We share content, articles, and campaigns focused on healthier habits and better understanding of the body.</p>
+    <h3>Impact</h3>
+    <p>We aim to help students understand their health and build better habits.</p>
   </div>
 </section>
 
