@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Blog</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | The Vital Three Initiative</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #0B132B, #C1122F, #F2B6A0);
-  color: white;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8%;
-}
-
-nav a {
-  color: white;
-  margin-left: 20px;
-  text-decoration: none;
-}
-
-section {
-  padding: 60px 8%;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 8%}
+.logo{font-weight:bold}
+nav a{color:white;text-decoration:none;margin-left:22px;opacity:.9}
+nav a:hover{text-decoration:underline}
+section{padding:55px 8%}
+h1{font-size:52px;margin-bottom:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.article{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border-radius:26px;padding:28px;border:1px solid rgba(255,255,255,.18)}
+.article h3{font-size:24px;margin-bottom:12px}
+.article p{line-height:1.7}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h3>The Vital Three Initiative</h3>
+  <div class="logo">The Vital Three Initiative</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -41,8 +32,24 @@ section {
 </header>
 
 <section>
-  <h1>Blog</h1>
-  <p>Articles coming soon.</p>
+  <h1>Blog & Articles</h1>
+
+  <div class="grid">
+    <div class="article">
+      <h3>Coming Soon: Stress and the Body</h3>
+      <p>An article explaining how stress can affect the brain, skin, and heart at the same time.</p>
+    </div>
+
+    <div class="article">
+      <h3>Coming Soon: Sleep and Health</h3>
+      <p>A deeper explanation of how sleep affects focus, skin repair, and heart health.</p>
+    </div>
+
+    <div class="article">
+      <h3>Coming Soon: Lifestyle Connections</h3>
+      <p>How daily habits influence multiple systems in the body and shape long-term health.</p>
+    </div>
+  </div>
 </section>
 
 </body>
