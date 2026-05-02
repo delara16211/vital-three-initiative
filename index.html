@@ -1,41 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Vital Three Initiative</title>
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-  background: linear-gradient(135deg, #0B132B, #C1122F, #F2B6A0);
-  color: white;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 8%;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-section {
-  padding: 60px 8%;
-}
-
-h1 {
-  font-size: 50px;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:linear-gradient(135deg,#0B132B,#C1122F,#F2B6A0);color:white;min-height:100vh}
+header{display:flex;justify-content:space-between;align-items:center;padding:28px 8%}
+.logo{font-weight:bold;letter-spacing:.5px}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:15px;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;padding:0 8%;max-width:950px}
+.hero h1{font-size:68px;line-height:1.05;margin-bottom:22px}
+.hero p{font-size:21px;line-height:1.6;max-width:750px}
+.btn{display:inline-block;margin-top:32px;background:white;color:#C1122F;padding:15px 30px;border-radius:40px;text-decoration:none;font-weight:bold;width:max-content}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px;padding:40px 8% 80px}
+.card{background:rgba(255,255,255,.12);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:28px}
+.card h3{margin-bottom:12px;font-size:24px}
+.card p{line-height:1.6}
+@media(max-width:700px){header{flex-direction:column;gap:15px}.hero h1{font-size:44px}nav a{margin:0 8px}}
 </style>
 </head>
-
 <body>
 
 <header>
-  <h3>The Vital Three Initiative</h3>
+  <div class="logo">The Vital Three Initiative</div>
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
@@ -44,11 +34,25 @@ h1 {
   </nav>
 </header>
 
-<section>
+<section class="hero">
   <h1>Brain. Skin. Heart.</h1>
-  <p>
-    A student-led initiative exploring how the brain, skin, and heart are connected.
-  </p>
+  <p>A student-led health initiative exploring how neurology, dermatology, and cardiology are connected through lifestyle, stress, sleep, and science.</p>
+  <a class="btn" href="contact.html">Join the Initiative</a>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Education</h3>
+    <p>We simplify medical and health concepts so students can understand how the body works as one connected system.</p>
+  </div>
+  <div class="card">
+    <h3>Research</h3>
+    <p>We aim to explore student health patterns through surveys, awareness projects, and research-based content.</p>
+  </div>
+  <div class="card">
+    <h3>Awareness</h3>
+    <p>We share content, articles, and campaigns focused on healthier habits and better understanding of the body.</p>
+  </div>
 </section>
 
 </body>
