@@ -1,112 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Vital Three Initiative</title>
-
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  background: linear-gradient(135deg, #0B132B 0%, #C1122F 55%, #F2B6A0 100%);
+  margin: 0;
+  font-family: Arial;
+  background: linear-gradient(135deg, #0B132B, #C1122F, #F2B6A0);
   color: white;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 30px 8%;
+  padding: 20px 8%;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   margin-left: 20px;
-  font-size: 14px;
-}
-
-.hero {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 8%;
-  max-width: 900px;
-}
-
-.hero h1 {
-  font-size: 65px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-}
-
-.btn {
-  margin-top: 30px;
-  background: white;
-  color: #C1122F;
-  padding: 14px 28px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 section {
-  margin: 40px 8%;
-  padding: 60px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 25px;
-  backdrop-filter: blur(10px);
+  padding: 60px 8%;
 }
 
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+h1 {
+  font-size: 50px;
 }
-
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 25px;
-}
-
-.card {
-  background: rgba(255,255,255,0.15);
-  padding: 25px;
-  border-radius: 20px;
-}
-
-input {
-  width: 100%;
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  margin-top: 10px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 14px 24px;
-  border-radius: 30px;
-  border: none;
-  background: white;
-  color: #C1122F;
-  font-weight: bold;
-}
-
-footer {
-  text-align: center;
-  padding: 40px;
-}
-
 </style>
 </head>
 
@@ -115,82 +37,19 @@ footer {
 <header>
   <h3>The Vital Three Initiative</h3>
   <nav>
-    <a href="#mission">Mission</a>
-    <a href="#pillars">Pillars</a>
-    <a href="#blog">Blog</a>
-    <a href="#contact">Contact</a>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<div class="hero">
+<section>
   <h1>Brain. Skin. Heart.</h1>
   <p>
-    A student-led initiative exploring how cardiology, neurology, and dermatology are deeply connected.
-  </p>
-  <a href="#newsletter" class="btn">Join Newsletter</a>
-</div>
-
-<section id="mission">
-  <h2>Our Mission</h2>
-  <p>
-    The Vital Three Initiative aims to simplify health education by connecting the brain, skin, and heart.
-    Through research, content creation, and awareness, we help students understand how their daily habits impact their overall health.
+    A student-led initiative exploring how the brain, skin, and heart are connected.
   </p>
 </section>
-
-<section id="pillars">
-  <h2>Our Three Pillars</h2>
-
-  <div class="pillars">
-
-    <div class="card">
-      <h3>Cardiology</h3>
-      <p>Understanding heart health, circulation, lifestyle habits, and cardiovascular risks.</p>
-    </div>
-
-    <div class="card">
-      <h3>Neurology</h3>
-      <p>Exploring brain function, stress, sleep, focus, and emotional health.</p>
-    </div>
-
-    <div class="card">
-      <h3>Dermatology</h3>
-      <p>Analyzing skin health, hormones, acne, and the link between internal and external health.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="blog">
-  <h2>Blog & Articles</h2>
-  <p>
-    Our blog will expand on our Instagram posts with deeper explanations, research insights, and real-life applications.
-  </p>
-
-  <div class="card" style="margin-top:20px;">
-    <h3>Coming Soon</h3>
-    <p>How stress connects the brain, skin, and heart.</p>
-  </div>
-</section>
-
-<section id="newsletter">
-  <h2>Join Our Newsletter</h2>
-  <p>Stay updated with our latest content and opportunities.</p>
-
-  <input type="email" placeholder="Enter your email">
-  <button>Subscribe</button>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: thevital3initiative@gmail.com</p>
-  <p>Instagram: @thevital3initiative</p>
-  <p>Phone: 0571884758</p>
-</section>
-
-<footer>
-  <p>© The Vital Three Initiative</p>
-</footer>
 
 </body>
 </html>
